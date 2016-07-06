@@ -20,6 +20,7 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', '"a1c31a22ef3d8e923ac082b203605c0b"'
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/xml'] } }
 }
 
 dependencies {
@@ -27,4 +28,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:design:24.0.0'
 }
