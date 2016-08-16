@@ -74,6 +74,7 @@ public class ForecastFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        Log.d(LOG_TAG, "onCreate");
     }
 
     @Override
@@ -85,6 +86,31 @@ public class ForecastFragment extends Fragment {
     public void onStart() {
         super.onStart();
         updateWeather();
+        Log.d(LOG_TAG, "onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(LOG_TAG, "onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(LOG_TAG, "onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(LOG_TAG, "onStop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(LOG_TAG, "onDestroy");
     }
 
     public void updateWeather(){
